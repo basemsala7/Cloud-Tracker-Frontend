@@ -9,6 +9,9 @@ export default {
           2: "#4F7BB0",
           3: "#96B5DC",
         },
+        linearOrange:{
+          100 : "#ED912A" , 
+        }
       },
       fontFamily: {
         poppins: ["Poppins"],
