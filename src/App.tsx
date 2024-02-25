@@ -1,7 +1,5 @@
+import NavBar from "./ui/NavBar";
+
 export default function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Running
-    </h1>
-  )
+  return <NavBar />;
 }
