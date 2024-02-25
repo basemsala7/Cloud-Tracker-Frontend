@@ -1,5 +1,5 @@
-import NavBar from "./ui/NavBar";
+import Applayout from "./ui/Applayout";
 
 export default function App() {
-  return <NavBar />;
+  return <Applayout />;
 }
