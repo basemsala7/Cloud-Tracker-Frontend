@@ -7,7 +7,7 @@ const Applayout = () => {
   return (
       <div>
           <NavBar />
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <Home/>
           </div>
           <Footer/>

@@ -5,12 +5,12 @@ interface Props {
 }
 
 const Types: any = {
-  primary: "bg-linearOrange-100 rounded-full",
+  primary: "bg-linearOrange-100 rounded-full text-white font-semibold",
 };
 
 const Sizes: any = {
-  l: "px-10 py-2" , 
-  xl: "px-14 py-2"
+  l: "w-[140px] py-2" , 
+  xl: "w-[200px] py-2"
 }
 
 
