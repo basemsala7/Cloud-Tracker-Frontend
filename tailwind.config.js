@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins"],
+        monasans: ["mona-sans"],
       },
     },
   },
