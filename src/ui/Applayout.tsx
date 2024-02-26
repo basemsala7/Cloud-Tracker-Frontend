@@ -7,7 +7,9 @@ const Applayout = () => {
   return (
       <div>
           <NavBar />
-          <Home/>
+          <div className="relative">
+            <Home/>
+          </div>
           <Footer/>
       </div>
   )
