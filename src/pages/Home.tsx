@@ -1,4 +1,3 @@
-import React from "react";
 import bannerbackground from "../assets/wave.png";
 import bannerimage from "../assets/pana.png";
 import leftbannar from "../assets/pen tool.png";
