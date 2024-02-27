@@ -11,14 +11,16 @@ const Footer = () => {
       <img
         src={waveFooter}
         alt="waveFooter"
-        className="w-full absolute top-[-150px]"
+        className="w-full absolute top-[-150px] -z-50"
       />
 
-      <div className="flex justify-between items-center py-10 px-40 text-white">
+      <div className="flex justify-between items-center py-10 px-40 text-white z-50">
         <div className="flex flex-col gap-4 items-center">
           <img src={logoWhite} alt="logo" />
           <p className="flex justify-center items-center gap-2 text-xl font-light">
-            <span className="text-2xl"><FaCopyright/></span>
+            <span className="text-2xl">
+              <FaCopyright />
+            </span>
             <span>copy rights reserved</span>
           </p>
         </div>
