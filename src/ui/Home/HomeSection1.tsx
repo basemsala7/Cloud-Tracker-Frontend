@@ -20,7 +20,7 @@ const HomeSection1 = () => {
         <div className="space-y-4">
           <p className="z-50 text-4xl font-semibold leading-[50px]">
             Your user-friendly guide <br /> to track your
-            <span className="text-linearOrange-100 font-bold"> AWS </span>
+            <span className="text-linearOrange-200 font-bold"> AWS </span>
             services !
           </p>
           <p className=" text-stone-500 text-lg">

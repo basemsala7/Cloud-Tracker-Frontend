@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Types: any = {
-  primary: "bg-linearOrange-100 rounded-full text-white font-semibold",
+  primary: "bg-linearOrange-200 rounded-full text-white font-semibold hover:bg-linearOrange-100 transition-all duration-300",
 };
 
 const Sizes: any = {

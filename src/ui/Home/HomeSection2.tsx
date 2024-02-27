@@ -15,7 +15,7 @@ const HomeSection2 = () => {
         <div className="space-y-4">
           <p className="z-50 text-4xl font-semibold leading-[50px] tracking-widest">
             What is{" "}
-            <span className="text-linearOrange-100 "> Cloud Tracker </span>?
+            <span className="text-linearOrange-200 "> Cloud Tracker </span>?
           </p>
           <p className=" text-stone-500 text-lg">
             Cloud Tracker is a software solution designed to assist users of

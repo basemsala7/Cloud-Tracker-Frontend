@@ -10,7 +10,8 @@ export default {
           3: "#96B5DC",
         },
         linearOrange:{
-          100 : "#ED912A" , 
+          100 : "#FDAC3D" ,
+          200 : "#ED912A" , 
         }
       },
       fontFamily: {
