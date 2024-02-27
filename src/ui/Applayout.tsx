@@ -6,7 +6,7 @@ const Applayout = () => {
   return (
     <div>
       <NavBar />
-      <div className="relative  font-poppins">
+      <div className="relative  font-poppins overflow-hidden">
         <Home />
       </div>
       <Footer />
