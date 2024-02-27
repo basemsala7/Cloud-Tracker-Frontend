@@ -100,7 +100,7 @@ const Home = () => {
         </div>
       </div>
       {/* fourth section */}
-      <div className="flex justify-between items-center py-28 pl-32 pr-20 z-50 relative mt-[10px] mb-72">
+      <div className="flex justify-between items-center py-28 pl-32 pr-20 z-50 relative mt-[10px] mb-80">
         <div className="w-[45%] z-50 flex flex-col justify-between items-center gap-10">
           <div className="space-y-4">
             <p className="z-50 text-[42px] font-semibold leading-[50px] tracking-[5px]">
