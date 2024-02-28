@@ -1,13 +1,13 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import Home from "../pages/Home";
+import { Outlet } from "react-router-dom";
 
 const Applayout = () => {
   return (
     <div>
       <NavBar />
       <div className="relative  overflow-hidden font-poppins">
-        <Home />
+        <Outlet />
       </div>
       <Footer />
     </div>
