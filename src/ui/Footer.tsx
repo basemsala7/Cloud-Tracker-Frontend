@@ -7,17 +7,17 @@ import logoWhite from "../assets/logo_white.png";
 
 const Footer = () => {
   return (
-    <div className="bg-linearBlue-1 relative">
+    <div className="relative bg-linearBlue-1">
       <img
         src={waveFooter}
         alt="waveFooter"
-        className="w-full absolute top-[-150px] -z-50"
+        className="absolute top-[-150px] -z-50 w-full"
       />
 
-      <div className="flex justify-between items-center py-10 px-40 text-white z-50">
-        <div className="flex flex-col gap-4 items-center">
+      <div className="z-50 flex items-center justify-between px-40 py-10 text-white">
+        <div className="flex flex-col items-center gap-4">
           <img src={logoWhite} alt="logo" />
-          <p className="flex justify-center items-center gap-2 text-xl font-light">
+          <p className="flex items-center justify-center gap-2 text-xl font-light">
             <span className="text-2xl">
               <FaCopyright />
             </span>
@@ -43,15 +43,15 @@ const Footer = () => {
         <div className="space-y-3">
           <p className="text-2xl font-bold">Contact us</p>
           <ul className="flex flex-col items-start gap-2 text-xl font-light">
-            <li className="flex justify-center items-center gap-1">
+            <li className="flex items-center justify-center gap-1">
               <CiLinkedin />
               <p>LinkedIn</p>
             </li>
-            <li className="flex justify-center items-center gap-1">
+            <li className="flex items-center justify-center gap-1">
               <FaGithub />
               <p>Github</p>
             </li>
-            <li className="flex justify-center items-center gap-1">
+            <li className="flex items-center justify-center gap-1">
               <MdOutlineMailOutline />
               <p>Email</p>
             </li>
