@@ -5,12 +5,13 @@ import Blog from "./pages/Blog";
 import Dashboard from "./pages/Dashboard";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import NotFound from "./pages/NotFound";
 
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <Applayout />,
+    element: <Applayout />, 
     children: [
       {
         path: "/",
@@ -38,6 +39,11 @@ const router = createHashRouter([
     path: "/signUp",
     element: <SignUp />,
   },
+
+  {
+    path: "*",
+    element: <NotFound />
+  }
 ]);
 
 export default function App() {
