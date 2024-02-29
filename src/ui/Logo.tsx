@@ -5,7 +5,7 @@ const Logo = () => {
     <img
       src={logo}
       alt="logo"
-      className="w-[70px] aspect-[4/3] h-auto p-0 object-fill"
+      className="aspect-[4/3] h-auto w-[70px] object-fill p-0"
     />
   );
 };

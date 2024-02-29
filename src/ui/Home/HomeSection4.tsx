@@ -4,14 +4,14 @@ import pen2 from "../../assets/pen2.png";
 
 const HomeSection4 = () => {
   return (
-    <div className="flex justify-between items-center py-28 pl-32 pr-20 z-50 relative mt-[10px] mb-80">
-      <div className="w-[45%] z-50 flex flex-col justify-between items-center gap-10">
+    <div className="relative z-50 mb-80 mt-[10px] flex items-center justify-between py-28 pl-32 pr-20">
+      <div className="z-50 flex w-[45%] flex-col items-center justify-between gap-10">
         <div className="space-y-4">
           <p className="z-50 text-[42px] font-semibold leading-[50px] tracking-[5px]">
             {" "}
             Cost & usage tracking{" "}
           </p>
-          <p className=" text-stone-500 text-xl">
+          <p className=" text-xl text-stone-500">
             Optimize your AWS expenses effortlessly with Cloud Tracker. Our
             advanced recommendation system analyzes your usage patterns and
             suggests smart adjustments, such as resizing services to match

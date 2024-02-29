@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 
+
 const router = createHashRouter([
   {
     path: "/",
@@ -40,5 +41,5 @@ const router = createHashRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (<RouterProvider router={router} />) ;
 }

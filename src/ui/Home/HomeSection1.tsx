@@ -5,25 +5,25 @@ import Button from "../Button";
 
 const HomeSection1 = () => {
   return (
-    <div className="flex justify-between items-center py-28 px-24 z-50 relative">
+    <div className="relative z-50 flex items-center justify-between px-24 py-28">
       <img
-        className="absolute top-20 left-0 w-[150px]"
+        className="absolute left-0 top-20 w-[150px]"
         src={leftbannar}
         alt=""
       />
       <img
-        className="absolute top-[-4px] right-0 z-0 w-[900px]"
+        className="absolute right-0 top-[-4px] z-0 w-[900px]"
         src={bannerbackground}
         alt=""
       />
-      <div className="w-[40%] z-50 flex flex-col justify-between items-center gap-10">
+      <div className="z-50 flex w-[40%] flex-col items-center justify-between gap-10">
         <div className="space-y-4">
           <p className="z-50 text-4xl font-semibold leading-[50px]">
             Your user-friendly guide <br /> to track your
-            <span className="text-linearOrange-200 font-bold"> AWS </span>
+            <span className="font-bold text-linearOrange-200"> AWS </span>
             services !
           </p>
-          <p className=" text-stone-500 text-lg">
+          <p className=" text-lg text-stone-500">
             Track and manage your AWS service usage effortlessly.{" "}
             <span className="font-semibold">Cloud Tracker</span> provides
             real-time insights and detailed billing information, helping you

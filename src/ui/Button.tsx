@@ -5,8 +5,7 @@ interface Props {
 }
 
 const Types: any = {
-  primary:
-    "bg-linearOrange-200 rounded-full text-white font-semibold hover:bg-linearOrange-100 transition-all duration-300",
+  primary: "rounded-full bg-linearOrange-200 font-semibold text-white transition-all duration-300 hover:bg-linearOrange-100",
 };
 
 const Sizes: any = {
@@ -16,7 +15,11 @@ const Sizes: any = {
 
 const Button = ({ children, type = "primary", size = "l" }: Props) => {
   return (
-    <button className={`${Types[type]} ${Sizes[size]}`}>{children}</button>
+    <button
+      className={`${Types[type]} ${Sizes[size]}`}
+    >
+      {children}
+    </button>
   );
 };
 
