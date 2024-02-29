@@ -6,6 +6,7 @@ const Logo = () => {
       src={logo}
       alt="logo"
       className="aspect-[4/3] h-auto w-[70px] object-fill p-0"
+      draggable="false"
     />
   );
 };

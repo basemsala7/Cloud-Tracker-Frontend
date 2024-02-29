@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active{
+    border: solid 4px #ED912A;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
