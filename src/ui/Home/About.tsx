@@ -1,7 +1,7 @@
 import banner2nd from "../../assets/pana2.png";
 import wave from "../../assets/wave2.png";
 
-const HomeSection2 = () => {
+const About = () => {
   return (
     <div className="relative z-50 mt-[200px] flex items-center justify-between py-28 pl-10 pr-32 ">
       <img
@@ -32,4 +32,4 @@ const HomeSection2 = () => {
   );
 };
 
-export default HomeSection2;
+export default About;

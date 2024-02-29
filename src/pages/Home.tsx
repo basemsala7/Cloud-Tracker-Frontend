@@ -1,16 +1,14 @@
-import HomeSection1 from "../ui/Home/HomeSection1";
-import HomeSection2 from "../ui/Home/HomeSection2";
-import HomeSection3 from "../ui/Home/HomeSection3";
-import HomeSection4 from "../ui/Home/HomeSection4";
+import Intro from "../ui/Home/Intro";
+import About from "../ui/Home/About";
+import Service from "../ui/Home/Service";
 
 
 const Home = () => {
   return (
     <div>
-        <HomeSection1/>
-        <HomeSection2/>
-        <HomeSection3/>
-        <HomeSection4/>
+        <Intro/>
+        <About/>
+        <Service/>
     </div>
   );
 };

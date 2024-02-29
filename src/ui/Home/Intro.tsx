@@ -3,7 +3,7 @@ import bannerbackground from "../../assets/wave.png";
 import leftbannar from "../../assets/pen tool.png";
 import Button from "../Button";
 
-const HomeSection1 = () => {
+const Intro = () => {
   return (
     <div className="relative z-50 flex items-center justify-between px-24 py-28">
       <img
@@ -37,4 +37,4 @@ const HomeSection1 = () => {
   );
 };
 
-export default HomeSection1;
+export default Intro;
