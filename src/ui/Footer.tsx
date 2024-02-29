@@ -16,7 +16,7 @@ const Footer = () => {
 
       <div className="z-50 flex items-center justify-between px-40 py-10 text-white">
         <div className="flex flex-col items-center gap-4">
-          <img src={logoWhite} alt="logo" />
+          <img src={logoWhite} alt="logo" draggable="false"/>
           <p className="flex items-center justify-center gap-2 text-xl font-light">
             <span className="text-2xl">
               <FaCopyright />
