@@ -33,7 +33,7 @@ const NavBar = () => {
 
         <li
           id="activeLink"
-          className={`absolute z-0 left-[${startPosition + "px"}]  
+          className={`absolute z-0 ${startPosition === 0 ? "left-0" : startPosition === 150 ? "left-[150px]" : "left-[300px]"} 
           h-[30px] w-[150px] rounded-full border-4 border-linearOrange-200 transition-all 
           duration-500 peer-hover/item1:left-0 
           peer-hover/item2:left-[150px] peer-hover/item3:left-[300px]`}
