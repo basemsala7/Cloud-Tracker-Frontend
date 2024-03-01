@@ -1,4 +1,9 @@
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import {
+  HashRouter,
+  Route,
+  Routes
+} from "react-router-dom";
+
 import Applayout from "./ui/Applayout";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
@@ -8,44 +13,24 @@ import SignUp from "./pages/SignUp";
 import NotFound from "./pages/NotFound";
 
 
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <Applayout />, 
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
-
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-    ],
-  },
-
-  {
-    path: "/signIn",
-    element: <SignIn />,
-  },
-
-  {
-    path: "/signUp",
-    element: <SignUp />,
-  },
-
-  {
-    path: "*",
-    element: <NotFound />
-  }
-]);
-
 export default function App() {
-  return (<RouterProvider router={router} />) ;
+  return (
+    <HashRouter>
+      <Routes>
+
+        <Route path="/" element={<Applayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Route>
+
+        <Route path="signIn" element={<SignIn />} />
+
+        <Route path="signUp" element={<SignUp />} />
+
+        <Route path="*" element={<NotFound />} />
+        
+      </Routes>
+    </HashRouter>
+  );
 }
