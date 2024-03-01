@@ -3,6 +3,7 @@ import Button from "../Button";
 import pana3 from "../../assets/pana3.png";
 import pana4 from "../../assets/pana4.png";
 import pen2 from "../../assets/pen2.png";
+import { Link } from "react-router-dom";
 
 const HomeSection3 = () => {
   return (
@@ -31,7 +32,9 @@ const HomeSection3 = () => {
                 effortlessly.
               </p>
             </div>
-            <Button size="xl">Explore Blog</Button>
+            <Link to="/blog">
+              <Button size="xl">Explore Blog</Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -54,7 +57,9 @@ const HomeSection3 = () => {
               recommendations from Cloud Tracker.
             </p>
           </div>
-          <Button size="xl">Go To Dashboard</Button>
+          <Link to="/dashboard">
+            <Button size="xl">Go To Dashboard</Button>
+          </Link>
         </div>
         <img className="z-50 w-[450px]" src={pana4} alt="" />
         <img

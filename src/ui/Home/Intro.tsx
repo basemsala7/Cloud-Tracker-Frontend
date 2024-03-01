@@ -2,6 +2,7 @@ import bannerimage from "../../assets/pana.png";
 import bannerbackground from "../../assets/wave.png";
 import leftbannar from "../../assets/pen tool.png";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
@@ -30,7 +31,9 @@ const Intro = () => {
             optimize costs and enhance efficiency. Simplify your AWS experience.
           </p>
         </div>
-        <Button size="xl">Get Started</Button>
+        <Link to="/signIn">
+          <Button size="xl">Get Started</Button>
+        </Link>
       </div>
       <img className="z-50 w-[650px]" src={bannerimage} alt="" />
     </div>
