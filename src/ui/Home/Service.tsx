@@ -9,7 +9,6 @@ const HomeSection3 = () => {
   const navigate = useNavigate() ; 
 
   const handleNavigate = (page:string)=>{
-    localStorage.setItem("activePage" , page) ; 
     navigate(`/${page}`) ; 
   }
 
