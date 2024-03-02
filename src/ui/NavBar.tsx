@@ -1,16 +1,21 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Logo from "./Logo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
   const navigate = useNavigate() ; 
+  const currentPage = localStorage.getItem("activePage") ; 
 
   const [startPosition, setStartPostion] = useState<string | null>(
-    localStorage.getItem("activePage")
-      ? localStorage.getItem("activePage")
-      : "0",
+    currentPage
+      ? currentPage
+      : "home",
   );
+
+  useEffect(function(){
+    setStartPostion(currentPage) ; 
+  } , [currentPage])
 
   const handleSelectPage = (x: string) => {
     localStorage.setItem("activePage", x);
@@ -18,7 +23,7 @@ const NavBar = () => {
   };
 
   const handleClickLogo = () =>{
-    handleSelectPage("0") ; 
+    handleSelectPage("home") ; 
     navigate("/") ; 
   };
 
@@ -31,7 +36,7 @@ const NavBar = () => {
         <NavLink
           to="/"
           className="peer/item1 z-10 w-[150px] text-center"
-          onClick={() => handleSelectPage("0")}
+          onClick={() => handleSelectPage("home")}
         >
           Home
         </NavLink>
@@ -39,7 +44,7 @@ const NavBar = () => {
         <NavLink
           to="/blog"
           className="peer/item2 z-10 w-[150px] text-center"
-          onClick={() => handleSelectPage("150")}
+          onClick={() => handleSelectPage("blog")}
         >
           Blog
         </NavLink>
@@ -47,14 +52,14 @@ const NavBar = () => {
         <NavLink
           to="/dashboard"
           className="peer/item3 z-10 w-[150px] text-center"
-          onClick={() => handleSelectPage("300")}
+          onClick={() => handleSelectPage("dashboard")}
         >
           Dashboard
         </NavLink>
 
         <div
           id="activeLink"
-          className={`absolute z-0 ${startPosition === "0" ? "left-0" : startPosition === "150" ? "left-[150px]" : "left-[300px]"} 
+          className={`absolute z-0 ${startPosition === "home" ? "left-0" : startPosition === "blog" ? "left-[150px]" : "left-[300px]"} 
           h-[30px] w-[150px] rounded-full border-4 border-linearOrange-200 transition-all 
           duration-500 peer-hover/item1:left-0 
           peer-hover/item2:left-[150px] peer-hover/item3:left-[300px]`}

@@ -3,9 +3,16 @@ import Button from "../Button";
 import pana3 from "../../assets/pana3.png";
 import pana4 from "../../assets/pana4.png";
 import pen2 from "../../assets/pen2.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HomeSection3 = () => {
+  const navigate = useNavigate() ; 
+
+  const handleNavigate = (page:string)=>{
+    localStorage.setItem("activePage" , page) ; 
+    navigate(`/${page}`) ; 
+  }
+
   return (
     <>
       {/* section 1 */}
@@ -32,9 +39,7 @@ const HomeSection3 = () => {
                 effortlessly.
               </p>
             </div>
-            <Link to="/blog">
-              <Button size="xl">Explore Blog</Button>
-            </Link>
+            <Button size="xl" onClick={()=>handleNavigate("blog")}>Explore Blog</Button>
           </div>
         </div>
       </div>
@@ -57,9 +62,7 @@ const HomeSection3 = () => {
               recommendations from Cloud Tracker.
             </p>
           </div>
-          <Link to="/dashboard">
-            <Button size="xl">Go To Dashboard</Button>
-          </Link>
+          <Button size="xl" onClick={()=>handleNavigate("dashboard")}>Go To Dashboard</Button>
         </div>
         <img className="z-50 w-[450px]" src={pana4} alt="" />
         <img
