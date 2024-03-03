@@ -22,22 +22,28 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold text-white">
+    <nav className=" z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold text-white tablet:px-6 tablet:text-sm">
       <div onClick={handleClickLogo} className="cursor-pointer">
         <Logo />
       </div>
-      <div className=" relative mt-0 flex w-[450px] items-center justify-between pt-0">
-        <NavLink to="/" className="peer/item1 z-10 w-[150px] text-center">
+      <div className=" relative mt-0 flex w-[450px] items-center justify-between pt-0 tablet:w-[300px]">
+        <NavLink
+          to="/"
+          className="peer/item1 z-10 w-[150px] text-center tablet:w-[100px]"
+        >
           Home
         </NavLink>
 
-        <NavLink to="/blog" className="peer/item2 z-10 w-[150px] text-center">
+        <NavLink
+          to="/blog"
+          className="peer/item2 z-10 w-[150px] text-center tablet:w-[100px]"
+        >
           Blog
         </NavLink>
 
         <NavLink
           to="/dashboard"
-          className="peer/item3 z-10 w-[150px] text-center"
+          className="peer/item3 z-10 w-[150px] text-center tablet:w-[100px]"
         >
           Dashboard
         </NavLink>
@@ -49,12 +55,12 @@ const NavBar = () => {
             startPosition === "/"
               ? "left-0"
               : startPosition === "/blog"
-                ? "left-[150px]"
-                : "left-[300px]"
+                ? "left-[150px] tablet:left-[100px]"
+                : "left-[300px] tablet:left-[200px]"
           } 
           h-[30px] w-[150px] rounded-full border-4 border-linearOrange-200 transition-all 
           duration-500 peer-hover/item1:left-0 
-          peer-hover/item2:left-[150px] peer-hover/item3:left-[300px]`}
+          peer-hover/item2:left-[150px] peer-hover/item3:left-[300px] tablet:w-[100px] tablet:peer-hover/item2:left-[100px] tablet:peer-hover/item3:left-[200px]`}
         ></div>
       </div>
 

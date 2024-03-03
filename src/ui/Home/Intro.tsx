@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <div className="relative z-50 flex items-center justify-between px-24 py-28">
       <img
-        className="absolute left-0 top-20 w-[150px]"
+        className="absolute left-[-1px] top-20 w-[150px]"
         src={leftbannar}
         alt=""
       />

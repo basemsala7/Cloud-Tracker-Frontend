@@ -4,7 +4,7 @@ interface Props {
   children: ReactNode;
   type?: string;
   size?: string;
-  onClick?: Function ;
+  onClick?: Function;
 }
 
 const Types: any = {
@@ -13,13 +13,18 @@ const Types: any = {
 };
 
 const Sizes: any = {
-  l: "w-[140px] py-2",
+  l: "w-[140px] py-2 tablet:w-[120px] tablet:py-1",
   xl: "w-[200px] py-2",
 };
 
-const Button = ({ children, type = "primary", size = "l" , onClick}: Props) => {
+const Button = ({ children, type = "primary", size = "l", onClick }: Props) => {
   return (
-    <button className={`${Types[type]} ${Sizes[size]}`} onClick={()=>onClick?.()}>{children}</button>
+    <button
+      className={`${Types[type]} ${Sizes[size]}`}
+      onClick={() => onClick?.()}
+    >
+      {children}
+    </button>
   );
 };
 

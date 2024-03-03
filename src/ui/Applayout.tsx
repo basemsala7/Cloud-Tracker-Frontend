@@ -7,7 +7,7 @@ const Applayout = () => {
     <div>
       <NavBar />
       <div className="relative  overflow-hidden font-poppins min-h-screen">
-        <Outlet />
+        {/* <Outlet /> */}
       </div>
       <Footer />
     </div>
