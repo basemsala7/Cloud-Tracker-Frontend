@@ -44,7 +44,7 @@ const NavBar = () => {
       <div
         className={`flex w-[70%] items-center justify-between 
         mobile:fixed mobile:top-[45px]
-        ${showNav ? "mobile:left-0" : "left-[-100%]"}  
+        ${showNav ? "mobile:left-0" : "left-[-200%]"}  
         transition-all duration-500 mobile:h-screen mobile:w-screen
       mobile:flex-col
         mobile:justify-start mobile:gap-10 mobile:bg-linearBlue-1 mobile:py-10`}
@@ -52,7 +52,7 @@ const NavBar = () => {
         <div
           className="relative mt-0 flex w-[450px] items-center justify-between pt-0 
         mobile:flex 
-        mobile:h-[120px] mobile:w-[100px] mobile:flex-col tablet:w-[100px]"
+        mobile:h-[120px] mobile:w-[100px] mobile:flex-col tablet:w-[300px]"
         >
           <NavLink
             to="/"

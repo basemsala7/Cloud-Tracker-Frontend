@@ -11,11 +11,11 @@ const Footer = () => {
       <img
         src={waveFooter}
         alt="waveFooter"
-        className="absolute top-[-150px] -z-50 w-full mobile:top-[-80px]"
+        className="absolute top-[-200px] -z-50 w-full mobile:top-[-80px]"
       />
 
       <div
-        className="z-50 flex items-center justify-between px-40 py-10 text-white
+        className="z-50 flex items-center justify-between px-40 pb-10 text-white
        tablet:px-16 mobile:px-4"
       >
         <div className="flex flex-col items-center gap-4">
