@@ -11,22 +11,22 @@ const Footer = () => {
       <img
         src={waveFooter}
         alt="waveFooter"
-        className="absolute top-[-150px] -z-50 w-full"
+        className="absolute top-[-150px] -z-50 w-full mobile:top-[-80px]"
       />
 
       <div
         className="z-50 flex items-center justify-between px-40 py-10 text-white
-       tablet:px-16"
+       tablet:px-16 mobile:px-4"
       >
         <div className="flex flex-col items-center gap-4">
           <img
             src={logoWhite}
             alt="logo"
             draggable="false"
-            className=" tablet:w-28"
+            className=" tablet:w-28 mobile:w-16"
           />
-          <p className="flex items-center justify-center gap-2 text-xl font-light tablet:text-lg">
-            <span className="text-2xl tablet:text-xl">
+          <p className="flex items-center justify-center gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
+            <span className="text-2xl tablet:text-xl mobile:text-sm">
               <FaCopyright />
             </span>
             <span>copy rights reserved</span>
@@ -34,8 +34,8 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <p className="text-2xl font-bold tablet:text-xl">Explore</p>
-          <ul className="flex flex-col items-center gap-2 text-xl font-light tablet:text-lg">
+          <p className="text-2xl font-bold tablet:text-xl mobile:text-sm">Explore</p>
+          <ul className="flex flex-col items-center gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
             <li>
               <p>Blog</p>
             </li>
@@ -49,8 +49,8 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <p className="text-2xl font-bold tablet:text-xl">Contact us</p>
-          <ul className="flex flex-col items-start gap-2 text-xl font-light tablet:text-lg">
+          <p className="text-2xl font-bold tablet:text-xl mobile:text-sm">Contact us</p>
+          <ul className="flex flex-col items-start gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
             <li className="flex items-center justify-center gap-1">
               <CiLinkedin />
               <p>LinkedIn</p>
