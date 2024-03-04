@@ -14,11 +14,19 @@ const Footer = () => {
         className="absolute top-[-150px] -z-50 w-full"
       />
 
-      <div className="z-50 flex items-center justify-between px-40 py-10 text-white">
+      <div
+        className="z-50 flex items-center justify-between px-40 py-10 text-white
+       tablet:px-16"
+      >
         <div className="flex flex-col items-center gap-4">
-          <img src={logoWhite} alt="logo" draggable="false"/>
-          <p className="flex items-center justify-center gap-2 text-xl font-light">
-            <span className="text-2xl">
+          <img
+            src={logoWhite}
+            alt="logo"
+            draggable="false"
+            className=" tablet:w-28"
+          />
+          <p className="flex items-center justify-center gap-2 text-xl font-light tablet:text-lg">
+            <span className="text-2xl tablet:text-xl">
               <FaCopyright />
             </span>
             <span>copy rights reserved</span>
@@ -26,8 +34,8 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <p className="text-2xl font-bold">Explore</p>
-          <ul className="flex flex-col items-center gap-2 text-xl font-light">
+          <p className="text-2xl font-bold tablet:text-xl">Explore</p>
+          <ul className="flex flex-col items-center gap-2 text-xl font-light tablet:text-lg">
             <li>
               <p>Blog</p>
             </li>
@@ -41,8 +49,8 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <p className="text-2xl font-bold">Contact us</p>
-          <ul className="flex flex-col items-start gap-2 text-xl font-light">
+          <p className="text-2xl font-bold tablet:text-xl">Contact us</p>
+          <ul className="flex flex-col items-start gap-2 text-xl font-light tablet:text-lg">
             <li className="flex items-center justify-center gap-1">
               <CiLinkedin />
               <p>LinkedIn</p>

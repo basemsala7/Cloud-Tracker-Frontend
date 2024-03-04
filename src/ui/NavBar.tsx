@@ -22,7 +22,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className=" z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold text-white tablet:px-6 tablet:text-sm">
+    <nav className=" z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold text-white tablet:px-12 tablet:text-sm">
       <div onClick={handleClickLogo} className="cursor-pointer">
         <Logo />
       </div>
