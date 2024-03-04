@@ -13,7 +13,7 @@ const Types: any = {
 };
 
 const Sizes: any = {
-  l: "w-[140px] py-2 tablet:w-[120px] tablet:py-1",
+  l: "w-[140px] py-2 tablet:w-[120px] tablet:py-1 mobile:w-[120px] mobile:py-1",
   xl: "w-[200px] py-2",
 };
 

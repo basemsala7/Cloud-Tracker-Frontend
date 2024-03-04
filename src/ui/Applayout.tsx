@@ -9,7 +9,7 @@ const Applayout = () => {
       <div className="relative  overflow-hidden font-poppins min-h-screen">
         {/* <Outlet /> */}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
