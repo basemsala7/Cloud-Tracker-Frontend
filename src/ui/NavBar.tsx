@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Logo from "./Logo";
 import { useEffect, useState } from "react";
@@ -21,7 +21,7 @@ const NavBar = () => {
     [currentPage],
   );
 
-  const handleClickLogo = () => {
+  const handleClickOnLogo = () => {
     navigate("/");
   };
 
@@ -30,9 +30,9 @@ const NavBar = () => {
       className=" relative z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold 
     text-white mobile:px-8 mobile:text-sm tablet:px-12 tablet:text-sm"
     >
-      <div onClick={handleClickLogo} className="cursor-pointer">
+      <button onClick={handleClickOnLogo} data-testid="logoBtn" className="cursor-pointer">
         <Logo />
-      </div>
+      </button>
 
       <button
         onClick={() => setShowNav(!showNav)}
@@ -99,9 +99,7 @@ const NavBar = () => {
           ></div>
         </div>
 
-        <Link to="/signIn">
-          <Button>Sign In</Button>
-        </Link>
+        <Button onClick={()=>navigate("/signIn")}>Sign In</Button>
       </div>
     </nav>
   );
