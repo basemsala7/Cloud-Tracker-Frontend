@@ -2,9 +2,11 @@ import bannerimage from "../../assets/pana.png";
 import bannerbackground from "../../assets/wave.png";
 import leftbannar from "../../assets/pen tool.png";
 import Button from "../Button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Intro = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative z-50 flex items-center justify-between px-24 py-28">
       <img
@@ -31,9 +33,9 @@ const Intro = () => {
             optimize costs and enhance efficiency. Simplify your AWS experience.
           </p>
         </div>
-        <Link to="/signIn">
-          <Button size="xl">Get Started</Button>
-        </Link>
+        <Button size="xl" onClick={() => navigate("/signIn")}>
+          Get Started
+        </Button>
       </div>
       <img className="z-50 w-[650px]" src={bannerimage} alt="" />
     </div>
