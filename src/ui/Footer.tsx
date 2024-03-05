@@ -3,7 +3,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { FaCopyright } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
-import logoWhite from "../assets/logo_white.png";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -12,6 +12,7 @@ const Footer = () => {
         src={waveFooter}
         alt="waveFooter"
         className="absolute top-[-200px] -z-50 w-full mobile:top-[-80px]"
+        data-testid="waveVector"
       />
 
       <div
@@ -19,12 +20,7 @@ const Footer = () => {
        tablet:px-16 mobile:px-4"
       >
         <div className="flex flex-col items-center gap-4">
-          <img
-            src={logoWhite}
-            alt="logo"
-            draggable="false"
-            className=" tablet:w-28 mobile:w-16"
-          />
+          <Logo type="secondery"/>
           <p className="flex items-center justify-center gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
             <span className="text-2xl tablet:text-xl mobile:text-sm">
               <FaCopyright />
