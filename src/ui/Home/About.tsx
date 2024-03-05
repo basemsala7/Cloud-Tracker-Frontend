@@ -3,17 +3,17 @@ import wave from "../../assets/wave2.png";
 
 const About = () => {
   return (
-    <div className="relative z-50 mt-[200px] flex items-center justify-between py-28 pl-10 pr-32 ">
+    <div className="relative z-50 mt-[200px] flex items-center justify-between py-28 pl-10 pr-32 tablet:flex-col tablet:gap-24 tablet:px-24">
       <img
         src={wave}
         alt="banner"
-        className="absolute left-[-1px] top-0 w-[600px]"
+        className="absolute left-[-1px] top-0 w-[600px] tablet:w-[450px]"
       />
 
-      <img className="z-50 w-[500px]" src={banner2nd} alt="" />
-      <div className="z-50 flex w-[45%] flex-col items-center justify-between gap-10">
+      <img className="z-50 w-[500px] tablet:w-[350px] tablet:self-start" src={banner2nd} alt="" />
+      <div className="z-50 flex w-[45%] tablet:w-full flex-col items-center justify-between gap-10">
         <div className="space-y-4">
-          <p className="z-50 text-4xl font-semibold leading-[50px] tracking-widest">
+          <p className="z-50 text-4xl font-semibold leading-[50px] tracking-widest tablet:text-3xl">
             What is{" "}
             <span className="text-linearOrange-200 "> Cloud Tracker </span>?
           </p>

@@ -6,20 +6,20 @@ import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
-    <div className="relative z-50 flex items-center justify-between px-24 py-28">
+    <div className="relative z-40 flex items-center justify-between tablet:flex-col-reverse tablet:gap-12 px-24 py-28">
       <img
-        className="absolute left-[-1px] top-20 w-[150px]"
+        className="absolute left-[-1px] top-20 w-[150px] tablet:w-[100px]"
         src={leftbannar}
         alt=""
       />
       <img
-        className="absolute right-0 top-[-4px] z-0 w-[900px]"
+        className="absolute right-0 top-[-4px] z-0 w-[900px] tablet:w-[500px]"
         src={bannerbackground}
         alt=""
       />
-      <div className="z-50 flex w-[40%] flex-col items-center justify-between gap-10">
+      <div className="z-50 flex w-[40%] tablet:w-full flex-col items-center justify-between gap-10">
         <div className="space-y-4">
-          <p className="z-50 text-4xl font-semibold leading-[50px]">
+          <p className="z-50 text-4xl font-semibold leading-[50px] tablet:text-3xl">
             Your user-friendly guide <br /> to track your
             <span className="font-bold text-linearOrange-200"> AWS </span>
             services !
@@ -35,7 +35,7 @@ const Intro = () => {
           <Button size="xl">Get Started</Button>
         </Link>
       </div>
-      <img className="z-50 w-[650px]" src={bannerimage} alt="" />
+      <img className="z-50 w-[650px] tablet:w-[450px] tablet:self-end" src={bannerimage} alt="" />
     </div>
   );
 };
