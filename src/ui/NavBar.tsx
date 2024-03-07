@@ -17,6 +17,7 @@ const NavBar = () => {
   useEffect(
     function () {
       setStartPostion(currentPage);
+      setShowNav(false) ; 
     },
     [currentPage],
   );

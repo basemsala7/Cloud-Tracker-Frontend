@@ -15,16 +15,16 @@ const HomeSection3 = () => {
   return (
     <>
       {/* section 1 */}
-      <div className="z-50 mt-[100px]">
+      <div className="z-40 mt-[100px]">
         <p className="w-full text-center text-xl font-semibold text-[#1B5AA8]">
           SERVICE WE PROVIDE
         </p>
 
-        <div className="relative z-50 mt-[10px] flex items-center justify-between py-28 pl-10 pr-32 mobile:flex-col mobile:gap-12 mobile:px-8 tablet:flex-col tablet:gap-12 tablet:px-24">
-          <img className="z-50 w-[600px] tablet:w-[450px] mobile:w-[300px]" src={pana3} alt="" />
-          <div className="z-50 flex w-[45%] flex-col items-center justify-between gap-10 mobile:w-full tablet:w-full">
+        <div className="relative z-40 mt-[10px] flex items-center justify-between py-28 pl-10 pr-32 mobile:flex-col mobile:gap-12 mobile:px-8 tablet:flex-col tablet:gap-12 tablet:px-24">
+          <img className="z-40 w-[600px] tablet:w-[450px] mobile:w-[300px]" src={pana3} alt="" />
+          <div className="z-40 flex w-[45%] flex-col items-center justify-between gap-10 mobile:w-full tablet:w-full">
             <div className="space-y-4">
-              <p className="z-50 text-4xl font-semibold leading-[50px] tracking-[5px] mobile:text-center mobile:text-2xl mobile:tracking-wide tablet:text-center tablet:text-3xl">
+              <p className="z-40 text-4xl font-semibold leading-[50px] tracking-[5px] mobile:text-center mobile:text-2xl mobile:tracking-wide tablet:text-center tablet:text-3xl">
                 {" "}
                 Educational Resources{" "}
               </p>
@@ -46,10 +46,10 @@ const HomeSection3 = () => {
       </div>
 
       {/* section 2 */}
-      <div className="relative z-50 mb-80 mobile:mb-64 mt-[10px] flex items-center justify-between py-28 pl-32 pr-20 tablet:flex-col-reverse tablet:gap-12 tablet:px-24 mobile:flex-col-reverse mobile:gap-12 mobile:px-8">
-        <div className="z-50 flex w-[45%] flex-col items-center justify-between gap-10 mobile:w-full tablet:w-full">
+      <div className="relative z-40 mb-80 mobile:mb-64 mt-[10px] flex items-center justify-between py-28 pl-32 pr-20 tablet:flex-col-reverse tablet:gap-12 tablet:px-24 mobile:flex-col-reverse mobile:gap-12 mobile:px-8">
+        <div className="z-40 flex w-[45%] flex-col items-center justify-between gap-10 mobile:w-full tablet:w-full">
           <div className="space-y-4">
-            <p className="z-50 text-4xl font-semibold leading-[50px] tracking-[5px] mobile:text-center mobile:text-2xl mobile:tracking-wide tablet:text-center tablet:text-3xl">
+            <p className="z-40 text-4xl font-semibold leading-[50px] tracking-[5px] mobile:text-center mobile:text-2xl mobile:tracking-wide tablet:text-center tablet:text-3xl">
               {" "}
               Cost & usage tracking{" "}
             </p>
@@ -67,7 +67,7 @@ const HomeSection3 = () => {
             Go To Dashboard
           </Button>
         </div>
-        <img className="z-50 w-[450px] tablet:w-[350px] mobile:w-[250px]" src={pana4} alt="" />
+        <img className="z-40 w-[450px] tablet:w-[350px] mobile:w-[250px]" src={pana4} alt="" />
         <img
           className="absolute bottom-[-130px] right-[-1px] z-0 w-[120px] tablet:w-[80px] mobile:w-[70px]"
           src={pen2}

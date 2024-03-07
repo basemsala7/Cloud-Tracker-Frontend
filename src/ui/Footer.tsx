@@ -11,7 +11,7 @@ const Footer = () => {
       <img
         src={waveFooter}
         alt="waveFooter"
-        className="absolute top-[-200px] -z-50 w-full mobile:top-[-80px]"
+        className="absolute top-[-200px] -z-50 w-full mobile:top-[-80px] tablet:top-[-120px]"
         data-testid="waveVector"
       />
 
