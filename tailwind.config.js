@@ -16,7 +16,6 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins"],
-        monasans: ["mona-sans"],
       },
       screens:{
         'mobile' : {'max' : '768px'} , 
