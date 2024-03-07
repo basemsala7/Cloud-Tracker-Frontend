@@ -28,15 +28,18 @@ const NavBar = () => {
 
   return (
     <nav
-      className=" relative z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold 
-    text-white mobile:px-8 mobile:text-sm tablet:px-12 tablet:text-sm"
+      className={`relative z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold 
+    text-white mobile:px-8 mobile:text-sm tablet:px-12 tablet:text-sm ${showNav ? "mobile:fixed" : ""}`}
     >
       <button onClick={handleClickOnLogo} data-testid="logoBtn" className="cursor-pointer">
         <Logo />
       </button>
 
       <button
-        onClick={() => setShowNav(!showNav)}
+        onClick={() =>{
+          setShowNav(!showNav) ; 
+          window.scrollTo(0,0) ; 
+        }}
         className="hidden mobile:block"
       >
         <BurgerSpin isClosed={showNav} />
