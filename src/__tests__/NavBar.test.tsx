@@ -51,31 +51,31 @@ describe("NavBar", () => {
   });
 });
 
-
 // should change {window.location.hash} before render
 
-it("applies active class when NavLink is active", () => {
-  window.location.hash = "#/blog";
+describe("NavLink", () => {
+  beforeEach(() => {
+    window.location.hash = "#/blog";
+    render(
+      <HashRouter>
+        <NavBar />
+      </HashRouter>,
+    );
+  });
 
-  render(
-    <HashRouter>
-      <NavBar />
-    </HashRouter>,
-  );
+  it("applies active class when NavLink is active", () => {
+    
+    const blogPage = screen.queryByText("Blog");
 
-  const blogPage = screen.queryByText("Blog");
+    expect(blogPage).toHaveClass("active");
+  });
 
-  expect(blogPage).toHaveClass("active");
-});
+  it("deos not apply active class when NavLink is not active", () => {
+    const dashboardPage = screen.queryByText("Dashboard");
+    const homePage = screen.queryByText("Home");
 
-it("deos not apply active class when NavLink is not active", () => {
-  window.location.hash = "#/dashboard";
-  render(
-    <HashRouter>
-      <NavBar />
-    </HashRouter>,
-  );
-  const blogPage = screen.queryByText("Blog");
 
-  expect(blogPage).not.toHaveClass("active");
+    expect(dashboardPage).not.toHaveClass("active");
+    expect(homePage).not.toHaveClass("active");
+  });
 });
