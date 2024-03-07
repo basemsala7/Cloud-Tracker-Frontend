@@ -18,6 +18,10 @@ export default {
         poppins: ["Poppins"],
         monasans: ["mona-sans"],
       },
+      screens:{
+        'mobile' : {'max' : '768px'} , 
+        'tablet' : {'min': '769px' , 'max' : '1400px'},
+      }
     },
   },
   plugins: [],

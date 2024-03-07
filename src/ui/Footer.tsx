@@ -3,7 +3,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { FaCopyright } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
-import logoWhite from "../assets/logo_white.png";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -11,14 +11,18 @@ const Footer = () => {
       <img
         src={waveFooter}
         alt="waveFooter"
-        className="absolute top-[-150px] -z-50 w-full"
+        className="absolute top-[-200px] -z-50 w-full mobile:top-[-80px] tablet:top-[-120px]"
+        data-testid="waveVector"
       />
 
-      <div className="z-50 flex items-center justify-between px-40 py-10 text-white">
+      <div
+        className="z-50 flex items-center justify-between px-40 pb-10 text-white
+       tablet:px-16 mobile:px-4"
+      >
         <div className="flex flex-col items-center gap-4">
-          <img src={logoWhite} alt="logo" />
-          <p className="flex items-center justify-center gap-2 text-xl font-light">
-            <span className="text-2xl">
+          <Logo type="secondery"/>
+          <p className="flex items-center justify-center gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
+            <span className="text-2xl tablet:text-xl mobile:text-sm">
               <FaCopyright />
             </span>
             <span>copy rights reserved</span>
@@ -26,8 +30,8 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <p className="text-2xl font-bold">Explore</p>
-          <ul className="flex flex-col items-center gap-2 text-xl font-light">
+          <p className="text-2xl font-bold tablet:text-xl mobile:text-sm">Explore</p>
+          <ul className="flex flex-col items-center gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
             <li>
               <p>Blog</p>
             </li>
@@ -41,8 +45,8 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <p className="text-2xl font-bold">Contact us</p>
-          <ul className="flex flex-col items-start gap-2 text-xl font-light">
+          <p className="text-2xl font-bold tablet:text-xl mobile:text-sm">Contact us</p>
+          <ul className="flex flex-col items-start gap-2 text-xl font-light tablet:text-lg mobile:text-xs">
             <li className="flex items-center justify-center gap-1">
               <CiLinkedin />
               <p>LinkedIn</p>
