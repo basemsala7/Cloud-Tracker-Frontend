@@ -20,6 +20,9 @@ export default {
       screens:{
         'mobile' : {'max' : '768px'} , 
         'tablet' : {'min': '769px' , 'max' : '1400px'},
+      },
+      transitionProperty:{
+        'height': 'height',
       }
     },
   },

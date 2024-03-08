@@ -15,7 +15,7 @@ const Intro = () => {
         alt=""
       />
       <img
-        className="absolute right-0 top-[-4px] z-0 w-[900px] mobile:w-[250px] tablet:w-[500px]"
+        className="absolute right-0 top-[-4px] z-10 w-[900px] mobile:w-[250px] tablet:w-[500px]"
         src={bannerbackground}
         alt=""
       />

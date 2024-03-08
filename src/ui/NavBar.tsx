@@ -49,7 +49,7 @@ const NavBar = () => {
         className={`flex w-[70%] items-center justify-between 
         mobile:fixed mobile:top-[45px]
         ${showNav ? "mobile:left-0" : "left-[-200%]"}  
-        transition-all duration-500 mobile:h-screen mobile:w-screen
+        transition-all duration-500 mobile:h-full mobile:w-screen
         mobile:flex-col
         mobile:justify-start mobile:gap-10 mobile:bg-linearBlue-1 mobile:py-10 z-50`}
       >
