@@ -1,18 +1,18 @@
-import banner2nd from "../../assets/pana2.png";
-import wave from "../../assets/wave2.png";
+import aboutVector from "../../assets/aboutVector.png";
+import aboutWave from "../../assets/aboutWave.png";
 
 const About = () => {
   return (
     <div className="relative z-40 mt-[200px] flex items-center justify-between py-28 pl-10 pr-32 mobile:flex-col mobile:gap-24 mobile:px-6 mobile:py-16 tablet:flex-col tablet:gap-24 tablet:px-24">
       <img
-        src={wave}
+        src={aboutWave}
         alt="banner"
         className="absolute left-[-1px] top-0 w-[600px] mobile:w-[300px] tablet:w-[450px]"
       />
 
       <img
         className="z-40 w-[500px] mobile:w-[250px] mobile:self-start tablet:w-[350px] tablet:self-start"
-        src={banner2nd}
+        src={aboutVector}
         alt=""
       />
       <div className="z-40 flex w-[45%] flex-col items-center justify-between gap-10 mobile:w-full tablet:w-full">

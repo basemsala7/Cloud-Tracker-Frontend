@@ -1,6 +1,6 @@
-import bannerimage from "../../assets/pana.png";
-import bannerbackground from "../../assets/wave.png";
-import leftbannar from "../../assets/pen tool.png";
+import introVector from "../../assets/introVector.png";
+import introWave from "../../assets/introWave.png";
+import circleLeft from "../../assets/circleLeft.png";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 
@@ -11,12 +11,12 @@ const Intro = () => {
     <div className="relative z-40 flex items-center justify-between px-24 py-28 mobile:flex-col-reverse mobile:gap-12 mobile:px-6 mobile:py-16 tablet:flex-col-reverse tablet:gap-12 tablet:py-16">
       <img
         className="absolute left-[-1px] top-20 w-[150px] mobile:w-[80px] tablet:w-[100px]"
-        src={leftbannar}
+        src={circleLeft}
         alt=""
       />
       <img
         className="absolute right-0 top-[-4px] z-10 w-[900px] mobile:w-[250px] tablet:w-[500px]"
-        src={bannerbackground}
+        src={introWave}
         alt=""
       />
       <div className="z-50 flex w-[40%] flex-col items-center justify-between gap-10 mobile:w-full tablet:w-full">
@@ -39,7 +39,7 @@ const Intro = () => {
       </div>
       <img
         className="z-50 w-[650px] mobile:w-[250px] mobile:self-end tablet:w-[450px] tablet:self-end"
-        src={bannerimage}
+        src={introVector}
         alt=""
       />
     </div>
