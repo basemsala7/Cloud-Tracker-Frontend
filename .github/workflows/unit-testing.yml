@@ -1,8 +1,10 @@
-name: React Test
+name: Unit Testing
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
+  push:
+    branches: [main]
 
 jobs:
   test:
@@ -13,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20.x'
+          node-version: "20.x"
       - name: Install dependencies
         run: npm i
       - name: Build
