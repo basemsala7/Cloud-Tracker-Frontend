@@ -1,5 +1,11 @@
+import LoginForm from "../Features/authentication/LoginForm";
+import FormContainer from "../ui/Form/FormContainer";
 const SignIn = () => {
-  return <div>SignIn</div>;
+  return (
+    <FormContainer>
+      <LoginForm />
+    </FormContainer>
+  );
 };
 
 export default SignIn;
