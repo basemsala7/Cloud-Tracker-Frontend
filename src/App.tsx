@@ -11,6 +11,8 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Profile } from "./pages/Profile";
+
 
 export default function App() {
   return (
@@ -20,9 +22,12 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Applayout />}>
               <Route path="/" element={<Home />} />
-              <Route path="blog" element={<Blog />}/>
-              <Route path="blog/:blogId" element={<BlogDetails/>} />
+              <Route path="blog" element={<Blog />} />
+              <Route path="blog/:blogId" element={<BlogDetails />} />
+
               <Route path="dashboard" element={<Dashboard />} />
+              <Route path="profile" element={<Profile />} />
+
             </Route>
 
             <Route path="signIn" element={<SignIn />} />

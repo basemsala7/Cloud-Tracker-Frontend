@@ -10,6 +10,7 @@ import { handleToastMessage } from "../../utils/helper";
 import { loginFormValidationSchema } from "../../utils/validationSchema";
 import { MdLockOutline, MdOutlineMail } from "react-icons/md";
 
+
 interface MyFormValues {
   email: string;
   password: string;
@@ -22,6 +23,7 @@ const LoginForm = () => {
 
   return (
     <div className="flex w-full justify-between">
+
       <div className="flex w-[35%] flex-col gap-5 mobile:w-full mobile:gap-10 tablet:w-[50%]">
         <div className="space-y-2 text-center">
           <p className="text-5xl font-medium mobile:text-3xl tablet:text-4xl">
@@ -63,8 +65,7 @@ const LoginForm = () => {
                   type="warning"
                   error={errors.email}
                   touched={touched.email}
-                  testid="emailWarning"
-                />
+                  testid="emailWarning"/>
               </div>
 
               {/* Password */}
@@ -92,6 +93,7 @@ const LoginForm = () => {
                 </div>
 
                 {/* Remember me and forget password */}
+
                 <div className=" flex justify-between px-6 text-xl text-gray-400  mobile:text-sm tablet:text-sm">
                   <CheckBox
                     check={rememberMe}
@@ -103,13 +105,15 @@ const LoginForm = () => {
                     </p>
                   </CheckBox>
                   <p className="cursor-pointer px-5 text-lg text-gray-400 transition-all duration-300 hover:text-linearBlue-1 hover:underline mobile:text-[10px]">
-                    Forget Password ?
+                   Forget Password ?
                   </p>
                 </div>
               </div>
 
               {/* Submit */}
+
               <Button role="submit" size="full" testid="submitForm">
+
                 Sign in
               </Button>
             </Form>

@@ -6,6 +6,9 @@ const Applayout = () => {
   const loacation = useLocation();
   const currentPage = loacation.pathname;
 
+  const setFooter = currentPage === "/" || currentPage === "/profile";
+
+
   return (
     <div>
       <NavBar />
@@ -14,7 +17,8 @@ const Applayout = () => {
       >
         <Outlet />
       </div>
-      {currentPage === "/" && <Footer />}
+      {setFooter && <Footer />}
+
     </div>
   );
 };
