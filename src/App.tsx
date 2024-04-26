@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
-import Blog from "./pages/Blog";
-import BlogDetails from "./pages/BlogDetails";
+// import Blog from "./pages/Blog";
+// import BlogDetails from "./pages/BlogDetails";
 import Dashboard from "./pages/Dashboard";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
@@ -13,7 +13,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UserProvider from "./context/UserProvider";
-import ProtectRouter from "./ui/ProtectRouter";
+// import ProtectRouter from "./ui/ProtectRouter";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
