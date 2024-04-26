@@ -1,13 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import { HashRouter } from "react-router-dom";
-import BlogInfo from "../ui/Blog/BlogDetails/BlogInfo";
+import BlogContent from "../ui/Blog/BlogDetails/BlogContent";
+
+
 
 describe("Blog Page", () => {
 	beforeEach(() => {
 		render(
-			<HashRouter>
-				<BlogInfo />
-			</HashRouter>,
+			<BlogContent data={""}/>
 		);
 	});
 	it("should have Title", () => {

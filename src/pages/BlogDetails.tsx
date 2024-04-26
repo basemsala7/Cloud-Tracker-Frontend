@@ -1,4 +1,4 @@
-import BlogInfo from "../ui/Blog/BlogDetails/BlogInfo";
+import BlogInfo from "../Features/Blogs/BlogInfo";
 
 const BlogDetails = () => {
 	return <BlogInfo />;
