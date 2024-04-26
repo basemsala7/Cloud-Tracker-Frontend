@@ -2,7 +2,7 @@ import { getBlog } from "./useBlogs";
 import { useParams } from "react-router-dom";
 import NotFound from "../../pages/NotFound";
 import BlogContent from "../../ui/Blog/BlogDetails/BlogContent";
-import blogImg from "../../../assets/logo/logo_color2.png";
+import blogImg from "../../assets/blogImg.png";
 
 const BlogInfo = () => {
 	const { id } = useParams<{ id: string }>();
