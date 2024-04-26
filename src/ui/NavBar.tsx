@@ -3,15 +3,19 @@ import Button from "./Button";
 import Logo from "./Logo";
 import { useEffect, useState } from "react";
 import { BurgerSpin } from "react-burger-icons";
+import { useParams } from "react-router-dom";
 import { useUser } from "../Features/authentication/useUser";
 import ProfileTab from "./Profile/ProfileTab";
+
 
 const NavBar = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const currentPage = location.pathname;
 
-	const [startPosition, setStartPostion] = useState<string>(currentPage);
+  const [startPosition, setStartPostion] = useState<string>(currentPage);
+  const { id } = useParams<{ id: string }>();
+
 
   // need this state in mobile design only
   const [showNav, setShowNav] = useState<boolean>(false);
@@ -24,7 +28,6 @@ const NavBar = () => {
     [currentPage],
   );
 
-  const blogId = `123`;
   return (
     <nav
       className={`relative z-50 flex w-full items-center justify-between bg-gradient-to-r from-linearBlue-3 via-linearBlue-2 to-linearBlue-1 px-24 py-1 font-poppins font-semibold 
@@ -84,7 +87,7 @@ const NavBar = () => {
               startPosition === "/"
                 ? "left-0 mobile:top-[-5px]"
                 : startPosition === "/blog" ||
-                    startPosition === `/blog/${blogId}`
+                    startPosition === `/blog/${id}`
                   ? "left-[150px] mobile:left-0 mobile:top-[45px] tablet:left-[100px]"
                   : startPosition === "/dashboard"
                     ? "left-[300px] mobile:left-0 mobile:top-[95px] tablet:left-[200px]"
@@ -93,7 +96,6 @@ const NavBar = () => {
             h-[30px] w-[150px] rounded-full border-4 border-linearOrange-200 transition-all 
             duration-500 peer-hover/item1:left-0 
             peer-hover/item2:left-[150px] peer-hover/item3:left-[300px] 
-
             mobile:w-[100px] mobile:peer-hover/item1:left-[0px]  mobile:peer-hover/item1:top-[-5px]
             mobile:peer-hover/item2:left-[0px]
             mobile:peer-hover/item2:top-[46px]
