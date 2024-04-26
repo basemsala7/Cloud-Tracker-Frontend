@@ -15,20 +15,15 @@ import "react-toastify/dist/ReactToastify.css";
 import UserProvider from "./context/UserProvider";
 import ProtectRouter from "./ui/ProtectRouter";
 
-
-
-
-
 const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 0,
-    },
-  },
+	defaultOptions: {
+		queries: {
+			staleTime: 0,
+		},
+	},
 });
 
 export default function App() {
-
 	return (
 		<>
 			<HashRouter>
@@ -37,10 +32,10 @@ export default function App() {
 						<ScrollToTop>
 							<Routes>
 								<Route path="/" element={<Applayout />}>
-								  <Route path="/" element={<Home />} />
-								  <Route path="blog" element={<Blog />} />
-                  <Route path="blog/:id" element={<BlogDetails />} />
-                  <Route
+									<Route path="/" element={<Home />} />
+									<Route path="blog" element={<Blog />} />
+									<Route path="blog/:id" element={<BlogDetails />} />
+									<Route
 										path="dashboard"
 										element={
 											<ProtectRouter route="dashboard">
