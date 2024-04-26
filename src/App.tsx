@@ -31,28 +31,28 @@ export default function App() {
 					<QueryClientProvider client={queryClient}>
 						<ScrollToTop>
 							<Routes>
-								<Route path="/" element={<Applayout />}>
-									<Route path="/" element={<Home />} />
-									<Route path="blog" element={<Blog />} />
-									<Route path="blog/:id" element={<BlogDetails />} />
+								{/* <Route path="/" element={<Applayout />}> */}
+								<Route path="/" element={<Home />} />
+								<Route path="blog" element={<Blog />} />
+								<Route path="blog/:id" element={<BlogDetails />} />
 
-									<Route
-										path="dashboard"
-										element={
-											<ProtectRouter route="dashboard">
-												<Dashboard />
-											</ProtectRouter>
-										}
-									/>
-									<Route
-										path="profile"
-										element={
-											<ProtectRouter route="profile">
-												<Profile />
-											</ProtectRouter>
-										}
-									/>
-								</Route>
+								<Route
+									path="dashboard"
+									element={
+										<ProtectRouter route="dashboard">
+											<Dashboard />
+										</ProtectRouter>
+									}
+								/>
+								<Route
+									path="profile"
+									element={
+										<ProtectRouter route="profile">
+											<Profile />
+										</ProtectRouter>
+									}
+								/>
+								{/* </Route> */}
 
 								<Route
 									path="signIn"
