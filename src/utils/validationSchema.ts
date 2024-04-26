@@ -14,14 +14,14 @@ export const profileFormValidationSchema = Yup.object().shape({
 	email: Yup.string()
 		.email("Invalid Email")
 		.required("Please Enter Your Email"),
-	username: Yup.string()
+	name: Yup.string()
 		.min(3, "Username Should Be At Least 3 Characters")
 		.max(15, "Username Should Be At Most 15 Characters")
 		.required("Please Enter Your Username"),
 });
 
 export const signUpFormValidationSchema = Yup.object({
-	username: Yup.string()
+	name: Yup.string()
 		.min(3, "Username Should Be At Least 3 Characters")
 		.max(15, "Username Should Be At Most 15 Characters")
 		.required("Please Enter Your Username"),
@@ -45,7 +45,9 @@ export const EditPasswordFormValidationSchema = Yup.object().shape({
 		.min(8, "Your Password Must Be At Least 8 Characters")
 		.required("Please Enter Your New Password"),
 
-	confirmPassword: Yup.string()
+
+	confirmNewPassword: Yup.string()
+
 		.min(8, "Your Password Must Be At Least 8 Characters")
 		.required("Please Confirm Your New Password")
 		.oneOf([Yup.ref("newPassword")], "Passwords Must Match"),

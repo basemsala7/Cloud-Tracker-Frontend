@@ -4,31 +4,54 @@ import HandleMessageForm from "../../ui/Form/HandleMessageForm";
 import { MdLockOutline } from "react-icons/md";
 import { useState } from "react";
 import { Form, Formik } from "formik";
-import { handleToastMessage } from "../../utils/helper";
 import { EditPasswordFormValidationSchema } from "../../utils/validationSchema";
+import useEditPassword from "./useEditPassword";
+import { useUserContext } from "../../context/UserProvider";
+import { useLogout } from "./useLogout";
+import { BeatLoader } from "react-spinners";
 
 interface MyFormValues {
 	currentPassword: string;
 	newPassword: string;
-	confirmPassword: string;
+	confirmNewPassword: string;
+
 }
 
 const EditPasswordform = () => {
 	const initialValues: MyFormValues = {
 		currentPassword: "",
 		newPassword: "",
-		confirmPassword: "",
+		confirmNewPassword: "",
+
 	};
 
 	const [showCurrentPassword, setShowCurrentPassword] =
 		useState<boolean>(false);
 	const [showNewPassword, setShowNewPassword] = useState<boolean>(false);
 
+	const { tokens } = useUserContext();
+	const { isLoading, editPassword } = useEditPassword();
+	const { logout } = useLogout(
+		"/signin",
+		"Session Expired, Please Login Again.",
+	);
+
+	const handleSubmit = (values: MyFormValues) => {
+		editPassword(
+			{ password: values, token: tokens?.token },
+			{
+				onSuccess: () => {
+					logout();
+				},
+			},
+		);
+	};
+
 	return (
 		<Formik
 			initialValues={initialValues}
-			onSubmit={() => {
-				handleToastMessage("Password Updated !", "success");
+			onSubmit={(values) => {
+				handleSubmit(values);
 			}}
 			validationSchema={EditPasswordFormValidationSchema}
 		>
@@ -83,10 +106,11 @@ const EditPasswordform = () => {
 							setShowPassword={setShowNewPassword}
 							type="password"
 							placeholder="Confirm New Password"
-							name="confirmPassword"
+							name="confirmNewPassword"
 							error={
-								touched.confirmPassword
-									? errors.confirmPassword
+								touched.confirmNewPassword
+									? errors.confirmNewPassword
+
 									: undefined
 							}
 						>
@@ -94,12 +118,17 @@ const EditPasswordform = () => {
 						</InputField>
 						<HandleMessageForm
 							type="warning"
-							error={errors.confirmPassword}
-							touched={touched.confirmPassword}
+							error={errors.confirmNewPassword}
+							touched={touched.confirmNewPassword}
 						/>
 					</div>
-					<Button role="submit" size="full">
-						Change Password
+					<Button role="submit" size="full" disabled={isLoading}>
+						{isLoading ? (
+							<BeatLoader color="#fff" size={8} />
+						) : (
+							"Change Password"
+						)}
+
 					</Button>
 				</Form>
 			)}

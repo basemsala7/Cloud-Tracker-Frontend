@@ -12,14 +12,16 @@ import { Link } from "react-router-dom";
 
 import { Formik, Form } from "formik";
 
-import { handleToastMessage } from "../../utils/helper";
 import { signUpFormValidationSchema } from "../../utils/validationSchema";
 
 import { MdLockOutline, MdOutlineMail } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
+import { useRegister } from "./useRegister";
+
+import { BeatLoader } from "react-spinners";
 
 interface MyFormValues {
-	username: string;
+	name: string;
 	email: string;
 	password: string;
 	confirmPassword: string;
@@ -27,12 +29,24 @@ interface MyFormValues {
 
 const SignUpForm = () => {
 	const initialValues: MyFormValues = {
-		username: "",
+		name: "",
 		email: "",
 		password: "",
 		confirmPassword: "",
 	};
 	const [showPassword, setShowPassword] = useState<boolean>(false);
+
+	const { register, isLoading } = useRegister();
+
+	const handleSubmit = (user: MyFormValues) => {
+		const handleUser = {
+			name: user.name,
+			email: user.email,
+			password: user.password,
+		};
+
+		register(handleUser);
+	};
 
 	return (
 		<div className="flex w-full justify-between">
@@ -56,8 +70,8 @@ const SignUpForm = () => {
 				<Formik
 					initialValues={initialValues}
 					validationSchema={signUpFormValidationSchema}
-					onSubmit={() => {
-						handleToastMessage("Login success !", "success");
+					onSubmit={(values) => {
+						handleSubmit(values);
 					}}
 				>
 					{({ errors, touched }) => (
@@ -65,20 +79,18 @@ const SignUpForm = () => {
 							{/* User Name */}
 							<div className="flex w-full items-center justify-between">
 								<InputField
-									name="username"
+									name="name"
 									placeholder="Username"
 									type="text"
-									error={
-										touched.username ? errors.username : undefined
-									}
+									error={touched.name ? errors.name : undefined}
 									data-testid="username"
 								>
 									<FaRegUser className=" text-2xl text-linearBlue-1 mobile:text-xl" />
 								</InputField>
 								<HandleMessageForm
 									type="warning"
-									error={errors.username}
-									touched={touched.username}
+									error={errors.name}
+									touched={touched.name}
 									testid="usernameWarning"
 								/>
 							</div>
@@ -152,8 +164,17 @@ const SignUpForm = () => {
 							</div>
 							{/* Submit */}
 							<div className="flex flex-col justify-center gap-1">
-								<Button role="submit" size="full" testid="submitForm">
-									Sign Up
+								<Button
+									role="submit"
+									size="full"
+									testid="submitForm"
+									disabled={isLoading}
+								>
+									{isLoading ? (
+										<BeatLoader color="#fff" size={8} />
+									) : (
+										"Sign up"
+									)}
 								</Button>
 								<div className="flex w-[92%] flex-col items-center justify-between gap-2">
 									<p className=" text-xl text-gray-400 mobile:text-[18px]">

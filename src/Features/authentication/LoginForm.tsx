@@ -6,9 +6,10 @@ import LoginWelcomeMessage from "../../ui/Form/LoginWelcomeMessage";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Form, Formik } from "formik";
-import { handleToastMessage } from "../../utils/helper";
 import { loginFormValidationSchema } from "../../utils/validationSchema";
 import { MdLockOutline, MdOutlineMail } from "react-icons/md";
+import { useLogin } from "./useLogin";
+import { BeatLoader } from "react-spinners";
 
 interface MyFormValues {
 	email: string;
@@ -19,6 +20,14 @@ const LoginForm = () => {
 	const initialValues: MyFormValues = { email: "", password: "" };
 	const [rememberMe, setRememberMe] = useState<boolean>(false);
 	const [showPassword, setShowPassword] = useState<boolean>(false);
+
+
+	const { isLoading, login } = useLogin();
+
+	const handleSubmit = (user: MyFormValues) => {
+		login(user);
+	};
+
 
 	return (
 		<div className="flex w-full justify-between">
@@ -42,8 +51,9 @@ const LoginForm = () => {
 				<Formik
 					initialValues={initialValues}
 					validationSchema={loginFormValidationSchema}
-					onSubmit={() => {
-						handleToastMessage("Login success !", "success");
+					onSubmit={(values) => {
+						handleSubmit(values);
+
 					}}
 				>
 					{({ errors, touched }) => (
@@ -54,7 +64,8 @@ const LoginForm = () => {
 									placeholder="E-mail"
 									type="text"
 									name="email"
-									data-testId="email"
+									data-testid="email"
+
 									error={touched.email ? errors.email : undefined}
 								>
 									<MdOutlineMail className=" text-3xl text-linearBlue-1 mobile:text-2xl" />
@@ -115,8 +126,18 @@ const LoginForm = () => {
 
 							{/* Submit */}
 
-							<Button role="submit" size="full" testid="submitForm">
-								Sign in
+							<Button
+								role="submit"
+								size="full"
+								testid="submitForm"
+								disabled={isLoading}
+							>
+								{isLoading ? (
+									<BeatLoader color="#fff" size={8} />
+								) : (
+									"Sign in"
+								)}
+                
 							</Button>
 						</Form>
 					)}

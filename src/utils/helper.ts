@@ -5,12 +5,12 @@ export function scrollToTop(): void {
 }
 
 export const handleToastMessage = (
-	error: string | undefined,
-	type: string,
+	message: string | undefined,
+	type: "warning" | "success",
 ) => {
 	switch (type) {
 		case "warning":
-			toast.warning(error, {
+			toast.warning(message, {
 				position: "top-right",
 				autoClose: 5000,
 				hideProgressBar: false,
@@ -23,7 +23,7 @@ export const handleToastMessage = (
 			});
 			break;
 		case "success":
-			toast.success(error, {
+			toast.success(message, {
 				position: "top-right",
 				autoClose: 5000,
 				hideProgressBar: false,
@@ -36,4 +36,13 @@ export const handleToastMessage = (
 			});
 			break;
 	}
+};
+
+export const convertImageToBase64 = (file: File, callback: Function) => {
+	const reader = new FileReader();
+	reader.readAsDataURL(file);
+	reader.onload = () => {
+		callback?.(reader?.result?.toString());
+	};
+
 };

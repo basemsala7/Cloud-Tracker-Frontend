@@ -3,10 +3,10 @@ import { RiErrorWarningFill } from "react-icons/ri";
 import { handleToastMessage } from "../../utils/helper";
 
 interface Props {
-	error: string | undefined;
-	touched: boolean | undefined;
-	type: string;
-	testid?: string;
+  error: string | undefined;
+  touched: boolean | undefined;
+  type: "warning" | "success";
+  testid?: string;
 }
 
 const HandleMessageForm = ({ error, touched, type, testid }: Props) => {
