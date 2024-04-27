@@ -26,18 +26,15 @@ const queryClient = new QueryClient({
 export default function App() {
 	return (
 		<>
-			<HashRouter>
-				<UserProvider>
-					<QueryClientProvider client={queryClient}>
+			<UserProvider>
+				<QueryClientProvider client={queryClient}>
+					<HashRouter>
 						<ScrollToTop>
 							<Routes>
 								<Route path="/" element={<Applayout />}>
 									<Route index element={<Home />} />
 									<Route path="blog" element={<Blog />} />
-									<Route
-										path="blog/:id"
-										element={<BlogDetails />}
-									/>
+									<Route path="blog/:id" element={<BlogDetails />} />
 									<Route
 										path="dashboard"
 										element={
@@ -77,9 +74,9 @@ export default function App() {
 								<Route path="*" element={<NotFound />} />
 							</Routes>
 						</ScrollToTop>
-					</QueryClientProvider>
-				</UserProvider>
-			</HashRouter>
+					</HashRouter>
+				</QueryClientProvider>
+			</UserProvider>
 			<ToastContainer />
 		</>
 	);
