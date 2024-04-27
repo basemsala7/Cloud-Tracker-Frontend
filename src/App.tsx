@@ -33,7 +33,7 @@ export default function App() {
 						<ScrollToTop>
 							<Routes>
 								<Route path="/app">
-									<Route path="test1" element={<div>test1</div>} />
+									<Route index element={<div>test1</div>} />
 									<Route path="test2" element={<div>test2</div>} />
 								</Route>
 								<Route path="/" element={<Applayout />}>
