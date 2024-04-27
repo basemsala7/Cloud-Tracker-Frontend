@@ -34,7 +34,7 @@ export default function App() {
 						<ScrollToTop>
 							<Routes>
 								<Route path="/" element={<Applayout />}>
-									<Route path="/" element={<Home />} />
+									<Route index element={<Home />} />
 									<Route path="blog" element={<Blog />} />
 									<Route
 										path="blog/:id"
@@ -48,7 +48,11 @@ export default function App() {
 												<Dashboard />
 											</ProtectRouter>
 										}
-									/>
+									>
+										<Route index element={<div>all chart</div>} />
+										<Route path="bubbleChart" element={<div>bubble chart</div>}/>
+										<Route path="notification" element={<div>notification</div>}/>
+									</Route>
 									<Route
 										path="profile"
 										element={
