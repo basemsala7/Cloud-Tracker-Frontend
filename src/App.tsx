@@ -31,7 +31,7 @@ export default function App() {
 					<QueryClientProvider client={queryClient}>
 						<ScrollToTop>
 							<Routes>
-								<Route path="/" element={<Applayout />}>
+								<Route element={<Applayout />}>
 									<Route path="/" element={<Home />} />
 									<Route path="/blog" element={<Blog />} />
 									<Route

@@ -2,9 +2,8 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Spinner from "./Spinner";
 
-import { useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useUser } from "../Features/authentication/useUser";
-import Home from "../pages/Home";
 
 const Applayout = () => {
 	const loacation = useLocation();
@@ -20,7 +19,7 @@ const Applayout = () => {
 			<div
 				className={`relative  ${currentPage === "/blog" ? "h-[calc(100vh-60.5px)]" : ""}  overflow-hidden`}
 			>
-				<Home />
+				<Outlet />
 			</div>
 			{setFooter && <Footer />}
 		</div>
