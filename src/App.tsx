@@ -32,7 +32,11 @@ export default function App() {
 					<HashRouter>
 						<ScrollToTop>
 							<Routes>
-								<Route path="/" element={<Applayout/>}>
+								<Route path="/app">
+									<Route path="test1" element={<div>test1</div>} />
+									<Route path="test2" element={<div>test2</div>} />
+								</Route>
+								<Route path="/" element={<Applayout />}>
 									<Route path="/" element={<Home />} />
 									<Route path="blog" element={<Blog />} />
 									<Route path="blog/:id" element={<BlogDetails />} />
