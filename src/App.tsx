@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UserProvider from "./context/UserProvider";
 import ProtectRouter from "./ui/ProtectRouter";
+import Applayout from "./ui/Applayout";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -31,8 +32,8 @@ export default function App() {
 					<HashRouter>
 						<ScrollToTop>
 							<Routes>
-								<Route path="/">
-									<Route index element={<Home />} />
+								<Route path="/" element={<Applayout/>}>
+									<Route path="/" element={<Home />} />
 									<Route path="blog" element={<Blog />} />
 									<Route path="blog/:id" element={<BlogDetails />} />
 									<Route
