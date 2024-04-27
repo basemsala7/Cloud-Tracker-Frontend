@@ -38,16 +38,16 @@ export default function App() {
 										path="/blog/:id"
 										element={<BlogDetails />}
 									/>
+									<Route
+										path="/dashboard"
+										element={
+											<ProtectRouter route="dashboard">
+												<Dashboard />
+											</ProtectRouter>
+										}
+									/>
 								</Route>
 
-								<Route
-									path="/dashboard"
-									element={
-										<ProtectRouter route="dashboard">
-											<Dashboard />
-										</ProtectRouter>
-									}
-								/>
 								<Route
 									path="/profile"
 									element={
