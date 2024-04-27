@@ -33,29 +33,29 @@ export default function App() {
 							<Routes>
 								<Route path="/" element={<Applayout />}>
 									<Route index element={<Home />} />
-									<Route path="/blog" element={<Blog />} />
+									<Route path="blog" element={<Blog />} />
 									<Route
-										path="/blog/:id"
+										path="blog/:id"
 										element={<BlogDetails />}
 									/>
 									<Route
-										path="/dashboard"
+										path="dashboard"
 										element={
 											<ProtectRouter route="dashboard">
 												<Dashboard />
 											</ProtectRouter>
 										}
 									/>
+									<Route
+										path="profile"
+										element={
+											<ProtectRouter route="profile">
+												<Profile />
+											</ProtectRouter>
+										}
+									/>
 								</Route>
 
-								<Route
-									path="/profile"
-									element={
-										<ProtectRouter route="profile">
-											<Profile />
-										</ProtectRouter>
-									}
-								/>
 								<Route
 									path="signIn"
 									element={

@@ -74,7 +74,7 @@ const NavBar = () => {
 					</NavLink>
 
 					<NavLink
-						to="dashboard"
+						to="/dashboard"
 						className="peer/item3 z-10 w-[150px] text-center tablet:w-[100px]"
 					>
 						Dashboard
