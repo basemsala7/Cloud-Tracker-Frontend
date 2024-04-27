@@ -34,25 +34,28 @@ export default function App() {
 								<Route path="/" element={<Applayout />}>
 									<Route path="/" element={<Home />} />
 									<Route path="/blog" element={<Blog />} />
-									<Route path="/blog/:id" element={<BlogDetails />} />
 									<Route
-										path="/dashboard"
-										element={
-											<ProtectRouter route="dashboard">
-												<Dashboard />
-											</ProtectRouter>
-										}
-									/>
-									<Route
-										path="/profile"
-										element={
-											<ProtectRouter route="profile">
-												<Profile />
-											</ProtectRouter>
-										}
+										path="/blog/:id"
+										element={<BlogDetails />}
 									/>
 								</Route>
 
+								<Route
+									path="/dashboard"
+									element={
+										<ProtectRouter route="dashboard">
+											<Dashboard />
+										</ProtectRouter>
+									}
+								/>
+								<Route
+									path="/profile"
+									element={
+										<ProtectRouter route="profile">
+											<Profile />
+										</ProtectRouter>
+									}
+								/>
 								<Route
 									path="signIn"
 									element={
