@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UserProvider from "./context/UserProvider";
 import ProtectRouter from "./ui/ProtectRouter";
+import AllCharts from "./ui/DashBoard/AllCharts";
 
 
 const queryClient = new QueryClient({
@@ -49,7 +50,7 @@ export default function App() {
 											</ProtectRouter>
 										}
 									>
-										<Route index element={<div>all chart</div>} />
+										<Route index element={<AllCharts/>} />
 										<Route path="bubbleChart" element={<div>bubble chart</div>}/>
 										<Route path="notification" element={<div>notification</div>}/>
 									</Route>
