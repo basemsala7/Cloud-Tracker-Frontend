@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
+import ChartFilter from "../../ui/DashBoard/ChartFilter";
 
 interface ChartData {
 	series: number[];
@@ -64,8 +65,20 @@ const PieChart = ({ type }: { type: "full" | "mini" }) => {
 		);
 	}
 
+	const [region, setRegion] = useState<string>("");
+	const [zones, setZones] = useState<string>("");
+	const [pricing, setPricing] = useState<string>("");
+
 	return (
-		<div className="transtion-all w-[70%] flex h-full items-center justify-center bg-white shadow-xl duration-300 hover:bg-stone-50">
+		<div className=" transtion-all flex h-full w-[70%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300">
+			<ChartFilter
+				region={region}
+				setRegion={setRegion}
+				zones={zones}
+				setZones={setZones}
+				pricing={pricing}
+				setPricing={setPricing}
+			/>
 			<ReactApexChart
 				options={fullChartData.options}
 				series={fullChartData.series}
