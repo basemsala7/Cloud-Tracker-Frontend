@@ -11,7 +11,7 @@ const DashBoardNav = () => {
 		<div className="flex h-full w-fit flex-col justify-between rounded-xl bg-gradient-to-t from-linearBlue-3 via-linearBlue-3 to-linearBlue-3 px-2 py-12 text-3xl text-linearBlue-1">
 			<Link
 				to="/dashboard"
-				className={`pb-1 ${currentPage === "/dashboard" ? "border-b-4 border-linearOrange-200" : ""} transition-all duration-100`}
+				className={`pb-1 ${currentPage.includes("/dashboard") && !currentPage.includes("/bubbleChart") && !currentPage.includes("/notification") ? "border-b-4 border-linearOrange-200" : ""} transition-all duration-100`}
 			>
 				<HiOutlineRectangleGroup />
 			</Link>

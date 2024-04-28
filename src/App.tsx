@@ -15,6 +15,9 @@ import "react-toastify/dist/ReactToastify.css";
 import UserProvider from "./context/UserProvider";
 import ProtectRouter from "./ui/ProtectRouter";
 import AllCharts from "./ui/DashBoard/AllCharts";
+import PieChart from "./Features/DashBoard/PieChart";
+import ColumnChart from "./Features/DashBoard/ColumnChart";
+import LineChart from "./Features/DashBoard/LineChart";
 
 
 const queryClient = new QueryClient({
@@ -41,7 +44,6 @@ export default function App() {
 										path="blog/:id"
 										element={<BlogDetails />}
 									/>
-
 									<Route
 										path="dashboard"
 										element={
@@ -50,7 +52,10 @@ export default function App() {
 											</ProtectRouter>
 										}
 									>
-										<Route index element={<AllCharts/>} />
+										<Route index  element={<AllCharts/>} />
+										<Route path="pieChart" element={<PieChart type="full"/>} />
+										<Route path="columnChart" element={<ColumnChart type="full"/>} />
+										<Route path="lineChart" element={<LineChart type="full"/>} />
 										<Route path="bubbleChart" element={<div>bubble chart</div>}/>
 										<Route path="notification" element={<div>notification</div>}/>
 									</Route>
