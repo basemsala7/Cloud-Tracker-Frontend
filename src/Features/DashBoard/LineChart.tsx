@@ -1,7 +1,8 @@
-import { useState } from "react";
+import {useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import ChartFilter from "../../ui/DashBoard/ChartFilter";
+import useGetElementWidth from "../../hooks/useGetElementWidth";
 
 interface ChartData {
 	series: { name: string; data: number[] }[];
@@ -9,6 +10,8 @@ interface ChartData {
 }
 
 const LineChart = ({ type }: { type: "full" | "mini" }) => {
+	const {containerRef , width} = useGetElementWidth() ;
+
 	const [miniChartData] = useState<ChartData>({
 		series: [
 			{
@@ -137,15 +140,20 @@ const LineChart = ({ type }: { type: "full" | "mini" }) => {
 		},
 	});
 
+
+
 	if (type === "mini") {
 		return (
-			<div className="transtion-all flex cursor-pointer items-center justify-center bg-white p-2 shadow-xl duration-300 hover:bg-stone-50">
+			<div
+				ref={containerRef}
+				className=" transtion-all flex w-[1220px] desktop:w-[1000px] tablet:w-[600px] mobile:w-[350px] cursor-pointer items-center justify-center bg-white p-2 shadow-xl duration-300 hover:bg-stone-50"
+			>
 				<ReactApexChart
 					options={miniChartData.options}
 					series={miniChartData.series}
 					type={miniChartData.options.chart?.type}
 					height={miniChartData.options.chart?.height}
-					width={miniChartData.options.chart?.width}
+					width={width}
 				/>
 			</div>
 		);
