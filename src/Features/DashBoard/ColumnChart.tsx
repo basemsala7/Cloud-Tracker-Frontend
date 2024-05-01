@@ -158,7 +158,7 @@ const ColumnChart = ({ type }: { type: "full" | "mini" }) => {
 		return (
 			<div
 				ref={containerRef}
-				className="desktop:w-[500px] transtion-all flex h-[300px] w-[600px] mobile:w-[350px] cursor-pointer items-center justify-center bg-white shadow-xl duration-300 hover:bg-stone-50"
+				className="desktop:w-[500px] transtion-all flex h-[300px] w-[600px] cursor-pointer items-center justify-center bg-white shadow-xl duration-300 hover:bg-stone-50 mobile:w-[350px]"
 			>
 				<ReactApexChart
 					options={miniChartData.options}
@@ -176,7 +176,10 @@ const ColumnChart = ({ type }: { type: "full" | "mini" }) => {
 	const [pricing, setPricing] = useState<string>("");
 
 	return (
-		<div className=" transtion-all flex h-full w-[70%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300">
+		<div
+			ref={containerRef}
+			className="transtion-all flex  h-full w-[90%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300 mobile:w-full mobile:gap-8 tablet:w-full tablet:gap-8"
+		>
 			<ChartFilter
 				region={region}
 				setRegion={setRegion}
@@ -190,7 +193,7 @@ const ColumnChart = ({ type }: { type: "full" | "mini" }) => {
 				series={fullChartData.series}
 				type={fullChartData.options.chart?.type}
 				height={fullChartData.options.chart?.height}
-				width={fullChartData.options.chart?.width}
+				width={width}
 			/>
 		</div>
 	);

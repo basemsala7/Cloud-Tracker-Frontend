@@ -10,7 +10,7 @@ interface ChartData {
 }
 
 const PieChart = ({ type }: { type: "full" | "mini" }) => {
-	const {containerRef , width} = useGetElementWidth() ;
+	const { containerRef, width } = useGetElementWidth();
 
 	const [miniChartData] = useState<ChartData>({
 		series: [35, 35, 30],
@@ -56,7 +56,10 @@ const PieChart = ({ type }: { type: "full" | "mini" }) => {
 
 	if (type === "mini") {
 		return (
-			<div ref={containerRef} className="w-[600px] desktop:w-[485px] mobile:w-[350px] transtion-all flex h-[300px] cursor-pointer items-center justify-center bg-white shadow-xl duration-300 hover:bg-stone-50">
+			<div
+				ref={containerRef}
+				className="desktop:w-[485px] transtion-all flex h-[300px] w-[600px] cursor-pointer items-center justify-center bg-white shadow-xl duration-300 hover:bg-stone-50 mobile:w-[350px]"
+			>
 				<ReactApexChart
 					options={miniChartData.options}
 					series={miniChartData.series}
@@ -73,7 +76,7 @@ const PieChart = ({ type }: { type: "full" | "mini" }) => {
 	const [pricing, setPricing] = useState<string>("");
 
 	return (
-		<div className=" transtion-all flex h-full w-[70%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300">
+		<div className="transtion-all flex  h-full w-[70%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300 mobile:w-full mobile:gap-8 tablet:w-full tablet:gap-8">
 			<ChartFilter
 				region={region}
 				setRegion={setRegion}
@@ -87,7 +90,7 @@ const PieChart = ({ type }: { type: "full" | "mini" }) => {
 				series={fullChartData.series}
 				type="pie"
 				height={fullChartData.options.chart?.height}
-				width={fullChartData.options.chart?.width}
+				width={600}
 			/>
 		</div>
 	);

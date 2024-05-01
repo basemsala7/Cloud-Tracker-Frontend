@@ -1,4 +1,4 @@
-import {useState } from "react";
+import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import ChartFilter from "../../ui/DashBoard/ChartFilter";
@@ -10,7 +10,7 @@ interface ChartData {
 }
 
 const LineChart = ({ type }: { type: "full" | "mini" }) => {
-	const {containerRef , width} = useGetElementWidth() ;
+	const { containerRef, width } = useGetElementWidth();
 
 	const [miniChartData] = useState<ChartData>({
 		series: [
@@ -140,13 +140,11 @@ const LineChart = ({ type }: { type: "full" | "mini" }) => {
 		},
 	});
 
-
-
 	if (type === "mini") {
 		return (
 			<div
 				ref={containerRef}
-				className=" transtion-all flex w-[1220px] desktop:w-[1000px] tablet:w-[600px] mobile:w-[350px] cursor-pointer items-center justify-center bg-white p-2 shadow-xl duration-300 hover:bg-stone-50"
+				className=" transtion-all desktop:w-[1000px] flex w-[1220px] cursor-pointer items-center justify-center bg-white p-2 shadow-xl duration-300 hover:bg-stone-50 mobile:w-[350px] tablet:w-[600px]"
 			>
 				<ReactApexChart
 					options={miniChartData.options}
@@ -164,7 +162,10 @@ const LineChart = ({ type }: { type: "full" | "mini" }) => {
 	const [pricing, setPricing] = useState<string>("");
 
 	return (
-		<div className=" transtion-all flex h-full w-[70%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300">
+		<div
+			ref={containerRef}
+			className=" transtion-all flex h-full w-[70%] flex-col items-center justify-between bg-white py-20 shadow-xl duration-300 mobile:w-full mobile:gap-8 tablet:w-full tablet:gap-8"
+		>
 			<ChartFilter
 				region={region}
 				setRegion={setRegion}
@@ -179,7 +180,7 @@ const LineChart = ({ type }: { type: "full" | "mini" }) => {
 				series={fullChartData.series}
 				type={fullChartData.options.chart?.type}
 				height={fullChartData.options.chart?.height}
-				width={fullChartData.options.chart?.width}
+				width={width}
 			/>
 		</div>
 	);

@@ -10,7 +10,7 @@ interface Prop {
 
 const SelectFilter = ({ value, defaultValue, setValue, options }: Prop) => {
 	return (
-		<div className="flex h-[35px] w-[200px] items-center justify-center bg-white">
+		<div className="flex h-[35px] w-[200px] items-center justify-center  bg-white mobile:justify-start">
 			<div className="text-sm text-stone-400">showing</div>
 			<Select
 				labelId="label"
@@ -52,9 +52,7 @@ const SelectFilter = ({ value, defaultValue, setValue, options }: Prop) => {
 					</span>
 				)}
 			>
-				{options?.map((item) => (
-					<MenuItem value={item}>{item}</MenuItem>
-				))}
+				{options?.map((item) => <MenuItem value={item}>{item}</MenuItem>)}
 			</Select>
 		</div>
 	);
