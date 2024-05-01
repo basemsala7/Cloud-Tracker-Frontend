@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import { Profile } from "./pages/Profile";
 import Applayout from "./ui/Applayout";
 import ScrollToTop from "./ui/ScrollToTop";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter , Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,7 +30,7 @@ const queryClient = new QueryClient({
 export default function App() {
 	return (
 		<>
-			<HashRouter>
+			<BrowserRouter >
 				<UserProvider>
 					<QueryClientProvider client={queryClient}>
 						<ScrollToTop>
@@ -105,7 +105,7 @@ export default function App() {
 						</ScrollToTop>
 					</QueryClientProvider>
 				</UserProvider>
-			</HashRouter>
+			</BrowserRouter >
 			<ToastContainer />
 		</>
 	);
