@@ -2,7 +2,6 @@ import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import ChartFilter from "../../ui/DashBoard/ChartFilter";
-import useGetElementWidth from "../../hooks/useGetElementWidth";
 
 interface ChartData {
 	series: number[];
@@ -10,7 +9,6 @@ interface ChartData {
 }
 
 const PieChart = ({ type }: { type: "full" | "mini" }) => {
-	const { containerRef, width } = useGetElementWidth();
 
 	const [miniChartData] = useState<ChartData>({
 		series: [35, 35, 30],
@@ -57,7 +55,6 @@ const PieChart = ({ type }: { type: "full" | "mini" }) => {
 	if (type === "mini") {
 		return (
 			<div
-				ref={containerRef}
 				className="desktop:w-[485px] transtion-all flex h-[300px] w-[600px] cursor-pointer items-center justify-center bg-white shadow-xl duration-300 hover:bg-stone-50 mobile:w-[350px]"
 			>
 				<ReactApexChart
